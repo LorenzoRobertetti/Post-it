@@ -1,0 +1,16 @@
+<h1> {{title}} </h1>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<app-login *ngIf="!loggedin" (eventLoggedin)="receiveEventLoggedin($event)" (eventPosts)="receiveEvent1($event)"
+  (eventFavPosts)="receiveEvent2($event)"></app-login>
+
+<p *ngIf="key!==undefined"> Your key is {{key}}</p>
+
+<!--<app-login [logpostits]="postits" [logfavoritesPostits]="favoritesPostits"></app-login>-->
+
+<app-show-postits *ngIf="loggedin" (eventPostsItToDelete)="receiveEventPostItToDelete($event)" [showpostits]="postits"
+  [showfavoritesPostits]="favoritesPostits"></app-show-postits>
+
+<app-edit-postits *ngIf="loggedin" [editpostits]="postits" [editfavoritesPostits]="favoritesPostits"
+  (eventEditPosts)="receiveEvent1($event)" (eventEditFavPosts)="receiveEvent2($event)"></app-edit-postits>

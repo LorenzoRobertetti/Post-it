@@ -1,0 +1,10 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<h2>Create new post-it</h2>
+<input type="text" #newTitle > Title <br/> <br/>
+<textarea #newContent ></textarea> Content <br/>
+<input type="checkbox" #newFavourite> Favourite <br/>
+<button (click) = 'addPostIt(newTitle.value, newContent.value, newFavourite.checked)'>Add</button>
+<button class="btn danger" (click)="resetPostit()">RESET</button>

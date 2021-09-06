@@ -1,0 +1,7 @@
+<label>Insert your key</label> <br/>
+<input type="text" placeholder="Enter key" #loginl required>
+<br/>
+<button (click) = "login(loginl.value)">Login</button>
+<button (click) = "generateNewKey()">Generate a new key</button>
+
+<p *ngIf="messageError">LOGIN FALLITO!!!</p>

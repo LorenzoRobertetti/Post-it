@@ -1,0 +1,18 @@
+<br/>
+<br/>
+<input type="checkbox" #onlyFavourites (change) = "{}"> Only Favourites
+
+<button
+  *ngFor='let post of postitsToShow(onlyFavourites.checked)'
+  class="post-it"
+  (click)="showContent(post)"
+  [ngStyle]="{'height': post === openPostit ? '200px' : '40px'}"
+  >
+  <b>{{post.title}}</b> <span *ngIf="post.favourite === true">★</span>
+  <p *ngIf="post === openPostit">
+  {{post.content}}
+  <br/>
+  <br/>
+  <button class="btn danger" (click)="sendPostsItToDelete(post)"> Delete </button>
+</p>
+</button>
