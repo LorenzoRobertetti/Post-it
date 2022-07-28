@@ -10,10 +10,10 @@ export class postIt {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'Post-it [Del Zompo] [Lorenzetti]';
+  title: string = 'Post-it web service';
   loggedin: boolean = false;
   key: string = undefined;
   postits: Array<postIt> = [];
