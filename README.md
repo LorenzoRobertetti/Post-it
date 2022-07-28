@@ -1,10 +1,17 @@
-# PostIt(DelZompo 587102 -Lorenzetti 531747)
-Abbiamo diviso il progetto in diverse componenti. Oltre la componente App, abbiamo aggiunto: login, showpostits e editpostits.
+# Persistent Post-it (notes) web service
 
-Allo start dell'applicazione l'unica componente visibile è la componente login. Tale componente permette di accedere ai propri dati inserando una chiave. Se non si è in possesso della chiave se ne può generare una nuova premendo il tasto "Generate a new key". Alla pressione del tasto "login" vengono scaricati i postit memorizzati nel database relativo alla chiave selezionata. Questi dati vengono inviati tramite EventEmitter all'AppComponent.
+https://github-zx5s5u-n7evxq.stackblitz.io
 
-A questo punto le altre due componenti saranno visibili(mentre login non lo sarà più).
+### Overview
 
-La componente "showpostits" è la componente che si occupa di mostrare i postit. È possibile, tramite la checkbox dedicata, mostrare solo i postit segnati come preferiti(importanti).
+The project has 4 components: app, login, showpostits and editpostits.
 
-"Editpostits" si occupa delle modifiche dei dati. In particolare si può aggiungere un nuovo postit o eliminarne uno presente. È anche possibile, tramite il tasto rosso "RESET", eliminare tutti i dati.
+At the start of the web service, the only visible component is the login component. This component allows you to access your data by entering a key. If you do not have the key, you can generate a new one by pressing the "Generate a new key" button. When the "login" button is pressed, the posts stored in the database relating to the selected key are downloaded. This data is sent via EventEmitter to the AppComponent.
+
+### Showpostits component
+
+The "showpostits" component is the component that takes care of showing the postits. It is possible, through the dedicated checkbox, to show only the posts marked as favorites (important).
+
+### Editpostits component
+
+"Editpostits" takes care of data changes. In particular, you can add a new postit or delete an existing one. It is also possible, using the red "RESET" button, to delete all the data.
